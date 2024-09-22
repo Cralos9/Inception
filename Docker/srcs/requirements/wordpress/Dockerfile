@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir /run/php/
 
-COPY www.conf /etc/php/7.4/fpm/pool.d/.
-COPY script.sh .
+COPY ./conf/www.conf /etc/php/7.4/fpm/pool.d/.
+COPY ./tools/script.sh .
 RUN chmod +x script.sh
 
 EXPOSE 9000
