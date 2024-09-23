@@ -26,6 +26,11 @@ else
                                --admin_password="${WP_ADMIN_PASSWORD}" \
                                --admin_email="${WP_ADMIN_EMAIL}" \
                                --allow-root
+
+    ./wp-cli.phar user create ${WP_USER} \
+                              ${WP_EMAIL} \
+                              --user_pass="${WP_USER_PASS}" \
+                              --allow-root 
 fi
 
-php-fpm7.4 -F
+exec php-fpm7.4 -F
