@@ -22,6 +22,6 @@ down:
 clean: down
 	@docker volume rm ${VOLUMES}
 	@docker system prune -a
-
+	@sudo rm -rf /home/cacarval/data
 
 re: clean build
