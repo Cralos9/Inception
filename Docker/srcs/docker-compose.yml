@@ -41,4 +41,15 @@ networks:
 
 volumes:
   web_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/cacarval/data
+
   db_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/cacarval/data

@@ -3,6 +3,7 @@ VOLUMES=$$(docker volume ls -q)
 
 
 build:
+	@mkdir -p /home/cacarval/data
 	@docker compose -f ${DOCKER_COMPOSE_PATH} up -d --build
 down:
 	@docker compose -f ${DOCKER_COMPOSE_PATH} down
